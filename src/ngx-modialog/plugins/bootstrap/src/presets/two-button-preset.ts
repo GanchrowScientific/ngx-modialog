@@ -82,15 +82,18 @@ export interface PromptPreset extends TwoButtonPreset {
   /** A placeholder for the input element. */
   placeholder: string;
 
+  /** An id of a datalist element that provides valid values for the input */
+  datalistId: string;
 }
 
 export class PromptPresetBuilder extends AbstractTwoButtonPresetBuilder {
   placeholder: FluentAssignMethod<string, this>;
+  datalistId: FluentAssignMethod<string, this>;
   defaultValue: FluentAssignMethod<string, this>;
 
   constructor(modal: Modal, defaultValues: PromptPreset = undefined) {
-    super(modal, extend<any>({showInput: true, defaultValue: ''}, defaultValues || {}),
-      ['placeholder', 'defaultValue']);
+    super(modal, extend<any>({showInput: true, defaultValue: '', datalistId: ''}, defaultValues || {}),
+      ['placeholder', 'defaultValue', 'datalistId']);
   }
 
   $$beforeOpen(config: PromptPreset): void {
