@@ -54,6 +54,7 @@ export class BSMessageModalTitle {
             name="bootstrap" 
             type="text" 
             class="form-control"
+            [attr.list]="context.datalistId"
             [value]="context.defaultValue"
             (change)="context.defaultValue = input.value"  
             placeholder="{{context.placeholder}}">

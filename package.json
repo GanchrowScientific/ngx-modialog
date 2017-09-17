@@ -1,7 +1,7 @@
 {
   "name": "ngx-modialog",
   "description": "Modal / Dialog for Angular",
-  "version": "3.0.4",
+  "version": "3.0.4-andrew",
   "repository": {
     "type": "git",
     "url": "https://github.com/shlomiassaf/ngx-modialog.git"
@@ -55,7 +55,6 @@
     "lib:sync": "gulp misc:syncConfig",
     "lint": "npm run tslint \"src/**/*.ts\"",
     "node": "node",
-    "postinstall": "npm run webdriver:update",
     "postversion": "git push && git push --tags",
     "preclean:install": "npm run clean",
     "preversion": "npm test",
